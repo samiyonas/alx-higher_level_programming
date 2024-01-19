@@ -10,14 +10,17 @@ if sys.argv[2] not in "+-*/":
     print("Unknown operator. Available operators: +, -, * and /")
     sys.exit(1)
 else:
+    fi = sys.argv[1]
+    se = sys.argv[3]
     if sys.argv[2] == '+':
-        print("{} + {} = {}".format(sys.argv[1], sys.argv[3], add(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} + {} = {}".format(fi, se, add(int(fi), int(se))))
         sys.exit(0)
     elif sys.argv[2] == '-':
-        print("{} - {} = {}".format(sys.argv[1], sys.argv[3], sub(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} - {} = {}".format(fi, se, sub(int(fi), int(se))))
         sys.exit(0)
     elif sys.argv[2] == '*':
-        print("{} * {} = {}".format(sys.argv[1], sys.argv[3], mul(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} * {} = {}".format(fi, se, mul(int(fi), int(se))))
         sys.exit(0)
     elif sys.argv[2] == '/':
-        print("{} / {} = {}".format(sys.argv[1], sys.argv[3], sub(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} / {} = {}".format(fi, se, sub(int(fi), int(se))))
+        sys.exit(0)
