@@ -22,5 +22,5 @@ else:
         print("{} * {} = {}".format(fi, se, mul(int(fi), int(se))))
         sys.exit(0)
     elif sys.argv[2] == '/':
-        print("{} / {} = {}".format(fi, se, sub(int(fi), int(se))))
+        print("{} / {} = {}".format(fi, se, div(int(fi), int(se))))
         sys.exit(0)
