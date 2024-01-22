@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 		count++;
 	}
 	if (count == 1)
-		return (1)
+		return (1);
 
 	while (i < count / 2)
 	{
