@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -22,6 +24,8 @@ int is_palindrome(listint_t **head)
 		follow = follow->next;
 		count++;
 	}
+	if (count == 1)
+		return (1)
 
 	while (i < count / 2)
 	{
