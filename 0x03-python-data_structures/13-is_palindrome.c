@@ -66,7 +66,14 @@ int is_palindrome(listint_t **head)
     }
 
     len = list_length(*head);
-    right_index = len / 2;
+    if (len % 2 == 0)
+    {
+        right_index = len / 2;
+    }
+    else
+    {
+        right_index = len / 2 + 1;
+    }
     left_index = len / 2 - 1;
 
     while (right_index != len)
