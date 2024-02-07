@@ -53,6 +53,10 @@ class Square:
         """ position attribute setter method """
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         elif value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
@@ -71,7 +75,7 @@ class Square:
             for i in range(0, self.__position[1]):
                 print()
             for j in range(0, self.__size):
-                print(" " * self.__position[0])
+                print(" " * self.__position[0], end="")
                 print("#" * self.__size)
         else:
             print()
