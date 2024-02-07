@@ -2,8 +2,7 @@
 
 """ Define a class """
 
+
 class Square:
-
     """ Empty Class """
-
     pass
