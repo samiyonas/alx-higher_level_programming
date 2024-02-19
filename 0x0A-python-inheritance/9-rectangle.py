@@ -30,5 +30,6 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
+        """ make the objects printable """
         return "[{}] {}"/
         "/{}".format(type(self).__name__, self.__width, self.__height)
