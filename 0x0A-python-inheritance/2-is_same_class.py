@@ -9,7 +9,6 @@ def is_same_class(obj, a_class):
     Args:
         obj (instance) - to be checked
         a_class (class) - class to check to
-
     Returns:
         returns either True or False
     """
