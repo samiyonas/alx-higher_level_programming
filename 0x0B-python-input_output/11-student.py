@@ -29,4 +29,5 @@ class Student:
 
     def reload_from_json(self, json):
         """ replace all the attributes of the object """
-        self.__dict__ = json
+        if json:
+            self.__dict__ = json
