@@ -19,7 +19,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ returns obj __dict__ suitable for JSON serialization """
-        if not attrs or type(attrs) is not list:
+        if type(attrs) is not list:
             return self.__dict__
         d = {}
         for i in attrs:
