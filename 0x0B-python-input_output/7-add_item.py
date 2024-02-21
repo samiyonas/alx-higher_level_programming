@@ -11,7 +11,7 @@ new_list = []
 
 try:
     new_list = load_from_json_file("add_item.json")
-except:
+except Exception:
     pass
 
 new_list.extend(sys.argv[1:])
