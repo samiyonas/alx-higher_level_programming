@@ -24,5 +24,5 @@ class Student:
         d = {}
         for i in attrs:
             if i in self.__dict__:
-                d += {i: self.__dict__[i]}
+                d.update({i: self.__dict__[i]})
         return d
