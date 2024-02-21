@@ -19,4 +19,4 @@ class Student:
 
     def to_json(self):
         """ returns obj __dict__ suitable for JSON serialization """
-        return obj.__dict__
+        return self.__dict__
