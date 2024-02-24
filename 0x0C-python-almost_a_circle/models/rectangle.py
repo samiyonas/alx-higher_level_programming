@@ -105,7 +105,7 @@ class Rectangle(Base):
                 elif arg == 2:
                     self.height = args[arg]
                 elif arg == 3:
-                    selfi.x = args[arg]
+                    self.x = args[arg]
                 elif arg == 4:
                     self.y = args[arg]
                 else:
@@ -125,3 +125,8 @@ class Rectangle(Base):
                         self.y = kwargs[i]
                     else:
                         break
+
+    def to_dictionary(self):
+        """ dictionary representation of rectangle """
+        d = {'x': self.x, 'y': self.y, 'id': self.id, 'width': self.width, 'height': self.height}
+        return d
