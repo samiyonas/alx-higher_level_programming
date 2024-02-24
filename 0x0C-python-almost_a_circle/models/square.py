@@ -36,3 +36,36 @@ class Square(Rectangle):
     def __str__(self):
         """ formatted class object """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """ update square class
+
+        Args:
+            args (tuple) - variable amount of argument
+            kwargs (dict) - variable amount of keyword arguments
+        """
+        if args and len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.size = args[i]
+                elif i == 2:
+                    self.x = args[i]
+                elif i == 3:
+                    self.y = args[i]
+                else:
+                    break
+        else:
+            if kwargs and len(kwargs) != 0:
+                for i in kwargs:
+                    if i == "id":
+                        self.id = kwargs[i]
+                    elif i == "size":
+                        self.size = kwargs[i]
+                    elif i == "x":
+                        self.x = kwargs[i]
+                    elif i == "y":
+                        self.y = kwargs[i]
+                    else:
+                        break
