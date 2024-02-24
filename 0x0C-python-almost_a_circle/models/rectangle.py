@@ -5,14 +5,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ create Rectangle class
-
-    Attributes:
-        __width (int) - width of rectangle
-        __height (int) - height of Rectangle
-        __x (any) - will document later
-        __y (any) - will document later
-    """
+    """ create Rectangle class """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ automatically initializes Rectangle objects
 
@@ -24,10 +17,10 @@ class Rectangle(Base):
             id (int) - identity of the base
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
