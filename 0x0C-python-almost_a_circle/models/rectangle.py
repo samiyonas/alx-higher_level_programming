@@ -94,7 +94,7 @@ class Rectangle(Base):
         """ formatted object print """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update our attributes """
         if args and len(args) != 0:
             for arg in range(len(args)):
@@ -105,8 +105,23 @@ class Rectangle(Base):
                 elif arg == 2:
                     self.height = args[arg]
                 elif arg == 3:
-                    self.x = args[arg]
+                    selfi.x = args[arg]
                 elif arg == 4:
                     self.y = args[arg]
                 else:
                     break
+        else:
+            if kwargs and len(kwargs) != 0:
+                for i in kwargs:
+                    if i == "id":
+                        self.id = kwargs[i]
+                    elif i == "width":
+                        self.width = kwargs[i]
+                    elif i == "height":
+                        self.height = kwargs[i]
+                    elif i == "x":
+                        self.x = kwargs[i]
+                    elif i == "y":
+                        self.y = kwargs[i]
+                    else:
+                        break
