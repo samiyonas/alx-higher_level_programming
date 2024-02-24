@@ -69,3 +69,8 @@ class Square(Rectangle):
                         self.y = kwargs[i]
                     else:
                         break
+
+    def to_dictionary(self):
+        """ change square instance to dictionary """
+        d = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+        return d
