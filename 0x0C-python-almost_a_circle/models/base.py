@@ -39,3 +39,11 @@ class Base:
         d_list = [cls.to_dictionary(i) for i in list_objs]
         with open(filename, 'w') as myfile:
             json.dump(d_list, myfile)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from JSON string to python object """
+        if json_string is None or len(json_string) == 0:
+            return []
+        list_obj = json.loads(json_string)
+        return list_obj
