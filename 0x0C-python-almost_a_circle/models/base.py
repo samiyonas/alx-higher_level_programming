@@ -47,3 +47,10 @@ class Base:
             return []
         list_obj = json.loads(json_string)
         return list_obj
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ change dictionary to instance """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
