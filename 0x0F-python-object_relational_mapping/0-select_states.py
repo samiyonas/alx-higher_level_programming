@@ -2,6 +2,8 @@
 """ List all states from database using ORM """
 from sys import argv
 import MySQLdb
+
+
 a1 = argv[1]
 a2 = argv[2]
 a3 = argv[3]
