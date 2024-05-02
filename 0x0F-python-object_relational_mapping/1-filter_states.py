@@ -12,11 +12,12 @@ if __name__ == "__main__":
             port=3306)
     cur = db.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE states.name REGEXP '^[N]' "
+            "SELECT * FROM states "
             "ORDER BY states.id ASC"
             )
     rows = cur.fetchall()
     for i in rows:
-        print(i)
+        if i[1][0] == 'N':
+            print(i)
     cur.close()
     db.close()
