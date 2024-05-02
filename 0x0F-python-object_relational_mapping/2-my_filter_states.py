@@ -11,10 +11,11 @@ if __name__ == "__main__":
             host="localhost",
             port=3306)
     cur = db.cursor()
+    query = "WHERE states.name = '{}' ".format(sys.argv[4])
     cur.execute(
-            "SELECT * FROM states "
-            "WHERE states.name = %s"
-            "ORDER BY states.id ASC", (sys.argv[4],)
+            "SELECT * FROM states " +
+            query +
+            "ORDER BY states.id ASC"
             )
     rows = cur.fetchall()
     for i in rows:
