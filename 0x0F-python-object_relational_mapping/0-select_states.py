@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 """ List all states from database using ORM """
-from sys import argv
 import MySQLdb
-
-
-a1 = argv[1]
-a2 = argv[2]
-a3 = argv[3]
+from sys import argv
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=a1, passwd=a2, host="localhost", port=3306, db=a3)
+    db = MySQLdb.connect(host="localhost", user=argv[1], password=argv[2],
+                         database=argv[3], charset="utf8", port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
-    for i in rows:
-        print(i)
+    for row in rows:
+        print(row)
     cur.close()
     db.close()
