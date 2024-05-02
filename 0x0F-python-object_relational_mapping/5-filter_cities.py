@@ -18,10 +18,10 @@ if __name__ == "__main__":
             "ORDER BY cities.id", (sys.argv[4],)
             )
     rows = cur.fetchall()
-    for i in range(len(rows)):
-        if i != len(rows) - 1:
-            print(rows[i][0], end=", ")
-        else:
-            print(rows[i][0])
+    row = []
+    for i in rows:
+        row.append(i[0])
+    row = ', '.join(row)
+    print(row)
     cur.close()
     db.close()
