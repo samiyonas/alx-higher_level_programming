@@ -12,7 +12,8 @@ if __name__ == "__main__":
             port=3306)
     cur = db.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE states.name REGEXP '^N' OR '^n' "
+            "SELECT * FROM states WHERE states.name REGEXP '^N' "
+            "OR states.name REGEXP '^n' "
             "ORDER BY states.id ASC"
             )
     rows = cur.fetchall()
