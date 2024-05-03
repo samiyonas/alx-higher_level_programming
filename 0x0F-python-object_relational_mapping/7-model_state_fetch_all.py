@@ -13,6 +13,6 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-query = session.query(State).order_by(State.id).all()
+query = session.query(State).order_by(State.id)
 for i in query:
     print("{}: {}".format(i.id, i.name))
