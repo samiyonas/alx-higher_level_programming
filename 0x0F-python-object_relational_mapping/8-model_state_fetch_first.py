@@ -16,4 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     que = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(que.id, que.name))
+    if que:
+        print("{}: {}".format(que.id, que.name))
+    else:
+        print()
