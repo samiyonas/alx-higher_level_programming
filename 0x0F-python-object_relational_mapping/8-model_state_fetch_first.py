@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if que:
         print("{}: {}".format(que.id, que.name))
     else:
-        print()
+        print("Nothing")
