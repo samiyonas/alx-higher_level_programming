@@ -8,7 +8,7 @@ if __name__ == "__main__":
     response = requests.get(
             "https://api.github.com/repos/{}/{}/commits".
             format(sys.argv[2], sys.argv[1]), headers=header)
-    for i in range(10):
-        sha = response.json()[i].get("sha")
-        auth = response.json()[i].get("commit").get("author").get("name")
+    for i in response.json()[0:10]:
+        sha = i.get("sha")
+        auth = i.get("commit").get("author").get("name")
         print("{}: {}".format(sha, auth))
